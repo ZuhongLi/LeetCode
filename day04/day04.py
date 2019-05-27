@@ -130,3 +130,28 @@ class Solution(object):
         return s
 s =Solution()
 print(s.countAndSay(5))
+
+
+num4
+class Solution(object):
+    def sortArrayByParityII(self, A):
+        """
+        :type A: List[int]
+        :rtype: List[int]
+        """
+        res= []
+        l1 = []
+        l2 = []
+        for el in A:
+            if el%2==0:
+                l1.append(el)
+            else:
+                l2.append(el)
+        for i in range(len(A)):
+            if i%2==0:
+                res.append(l1.pop(0))
+            else:
+                res.append(l2.pop(0))
+        return res
+s = Solution()
+print(s.sortArrayByParityII([4,2,5,7]))
