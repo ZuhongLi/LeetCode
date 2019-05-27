@@ -85,3 +85,110 @@ class Solution(object):
         return head
 s = Solution()
 print(s.deleteDuplicates([1,2,3,4,5]))
+
+'''
+@author:Lee
+@file:test08.py
+@Time: 2019/4/1 20:18
+'''
+#num1
+# class Solution(object):
+#     def flipAndInvertImage(self, A):
+#         """
+#         :type A: List[List[int]]
+#         :rtype: List[List[int]]
+#         """
+#         for el in A:
+#             j = -1
+#             for i in range(len(el)):
+#                 if i <= len(el) // 2 - 1:
+#                     el[i], el[j] = el[j], el[i]
+#                 i = i + 1
+#                 j = j - 1
+#             for i  in range(len(el)):
+#                 if el[i] ==0:
+#                     el[i]=1
+#                 else: el[i] =0
+#         return A
+# s = Solution()
+# print(s.flipAndInvertImage([[1,0,0],[0,1,1,0,1]]))
+
+# num2
+# class Solution(object):
+#     def trailingZeroes(self, n):
+#         """
+#         :type n: int
+#         :rtype: int
+#         """
+        # 暴力搜索
+        # a = 1
+        # if n ==0:
+        #     return 1
+        # for i in range(1,n+1):
+        #     a = a * i
+        # s = str(a)
+        # i = -1
+        # count = 0
+        # for j in range(len(s)):
+        #     if s[i]=='0':
+        #         count = count + 1
+        #         i = i - 1
+        #     else:
+        #         return count
+
+    #所有的0都可以看做是5*2的结果，所以n有几个5，就有几个0
+        # return 0 if n ==0 else n/5 +trailingZeroes(n/5)
+#         return 0 if n == 0 else n // 5 + self.trailingZeroes(n //5)
+# s = Solution()
+# print(s.trailingZeroes(5))
+
+#num 3
+# class Solution(object):
+#     def titleToNumber(self, s):
+#         """
+#         :type s: str
+#         :rtype: int
+#         """
+#         sum = 0
+#         i = 0
+#         for el in s[::-1]:
+#             sum += (ord(el)-ord('A')+1)*(26**i)
+#             i=i+1
+#         return sum
+# s = Solution()
+# print(s.titleToNumber('ZY'))
+
+
+#num 4
+# class Solution(object):
+#     def diStringMatch(self, S):
+#         """
+#         :type S: str
+#         :rtype: List[int]
+#         """
+#         n = len(S)
+#         l = sorted([i for i in range(n + 1)])
+#
+#         l1 = []
+#         for i in S:
+#             if i == 'I':
+#                 l1.append(l.pop(0))
+#             else:
+#                 l1.append(l.pop(-1))
+#         return l1 +l
+# s = Solution()
+# print(s.diStringMatch('IDID'))
+
+#num 5
+class Solution(object):
+    def rotate(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: None Do not return anything, modify nums in-place instead.
+        """
+        nums1 = nums[0:len(nums)-k]
+        nums2 = nums[len(nums)-k:len(nums)]
+        return nums2+nums1
+s = Solution()
+print(s.rotate([1,2,3,4,5,6,7],3))
