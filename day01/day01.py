@@ -41,3 +41,21 @@ print(s)
 #                 buff_dict[target-nums[i]] = i;
 # s= Solution().twoSum([2,3,5,7,9,11,13,15,17],20)
 # print(s)
+
+
+#num 334
+# class Solution(object):
+#     def reverseString(self, s):
+#         """
+#         :type s: List[str]
+#         :rtype: None Do not return anything, modify s in-place instead.
+#         """
+#         # return s[::-1]
+#         left ,right = 0,len(s)-1
+#         while left<right:
+#             s[left],s[right] = s[right],s[left]
+#             left+=1
+#             right-=1
+#         return s
+# s = Solution()
+# print(s.reverseString(["H","a","n","n","a","h"]))
