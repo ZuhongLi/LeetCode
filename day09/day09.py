@@ -22,6 +22,7 @@
 # s = Solution()
 # print(s.reverseString(["H","a","n","n","a","h"]))
 
+
 # num821
 # class Solution(object):
 #     def shortestToChar(self, S, C):
@@ -45,6 +46,7 @@
 #         self.val = x
 #         self.left = None
 #         self.right = None
+
 from collections import deque
 # class Solution(object):
 #     def insertIntoBST(self, root, val):
