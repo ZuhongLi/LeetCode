@@ -47,7 +47,7 @@
 #         self.left = None
 #         self.right = None
 
-from collections import deque
+# from collections import deque
 # class Solution(object):
 #     def insertIntoBST(self, root, val):
 #         """
